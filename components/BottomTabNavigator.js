@@ -1,16 +1,13 @@
-// BottomTabNavigator.js
 import React from 'react';
-import { Image, StyleSheet, View } from 'react-native'; // Import View
+import { Image, StyleSheet, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-// Import your images
 import homeIcon from '../assets/home.png';
 import depositsIcon from '../assets/deposit.png';
 import expensesIcon from '../assets/expenses.png';
 import investIcon from '../assets/invest.png';
 import profileIcon from '../assets/profile.png';
 
-// Screens for each tab
 import Deposits from '../screens/Deposits';
 import Expenses from '../screens/Expenses';
 import Profile from '../screens/Profile';
@@ -26,13 +23,16 @@ const BottomTabNavigator = () => {
         headerShown: false,
         tabBarStyle: { height: 90 },
       }}
+      tabBarOptions={{
+        activeTintColor: '#000',
+      }}
     >
       <Tab.Screen 
         name="Home" 
         component={Home} 
         options={{
-          tabBarIcon: () => (
-            <View style={styles.iconContainer}>
+          tabBarIcon: ({ color, focused }) => (
+            <View style={[styles.iconContainer, { backgroundColor: focused ? '#ddd' : '#fff' }]}>
               <Image source={homeIcon} style={styles.icon} />
             </View>
           ),
@@ -42,8 +42,8 @@ const BottomTabNavigator = () => {
         name="Deposits" 
         component={Deposits} 
         options={{
-          tabBarIcon: () => (
-            <View style={styles.iconContainer}>
+          tabBarIcon: ({ color, focused }) => (
+            <View style={[styles.iconContainer, { backgroundColor: focused ? '#ddd' : '#fff' }]}>
               <Image source={depositsIcon} style={styles.icon} />
             </View>
           ),
@@ -53,8 +53,8 @@ const BottomTabNavigator = () => {
         name="Expenses" 
         component={Expenses} 
         options={{
-          tabBarIcon: () => (
-            <View style={styles.iconContainer}>
+          tabBarIcon: ({ color, focused }) => (
+            <View style={[styles.iconContainer, { backgroundColor: focused ? '#ddd' : '#fff' }]}>
               <Image source={expensesIcon} style={styles.icon} />
             </View>
           ),
@@ -64,8 +64,8 @@ const BottomTabNavigator = () => {
         name="Invest" 
         component={Invest} 
         options={{
-          tabBarIcon: () => (
-            <View style={styles.iconContainer}>
+          tabBarIcon: ({ color, focused }) => (
+            <View style={[styles.iconContainer, { backgroundColor: focused ? '#ddd' : '#fff' }]}>
               <Image source={investIcon} style={styles.icon} />
             </View>
           ),
@@ -75,8 +75,8 @@ const BottomTabNavigator = () => {
         name="Profile" 
         component={Profile} 
         options={{
-          tabBarIcon: () => (
-            <View style={styles.iconContainer}>
+          tabBarIcon: ({ color, focused }) => (
+            <View style={[styles.iconContainer, { backgroundColor: focused ? '#ddd' : '#fff' }]}>
               <Image source={profileIcon} style={styles.icon} />
             </View>
           ),
