@@ -1,11 +1,13 @@
-import React from 'react'
-import { Text, View } from 'react-native-elements'
+// Settings.js
+import React from 'react';
+import { View, Text } from 'react-native';
 
 const Settings = () => {
   return (
-    <View><Text>Settings</Text></View>
-   
-  )
-}
+    <View>
+      <Text>Settings Screen</Text>
+    </View>
+  );
+};
 
-export default Settings
+export default Settings;

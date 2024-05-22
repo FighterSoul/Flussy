@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Navbar from '../components/Navbar';
-import BottomTabNavigator from '../components/BottomTabNavigator';
 
 const Home = () => {
   return (

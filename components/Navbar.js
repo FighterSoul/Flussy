@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
   },
   sideNav: {
     position: 'absolute',
-    top: 130,
+    top: 110,
     left: 10,
     width: '40%',
     backgroundColor: '#fff',

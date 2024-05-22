@@ -24,9 +24,6 @@ const BottomTabNavigator = () => {
         tabBarStyle: { height: 90 },
         tabBarActiveTintColor: '#000', 
       }}
-      tabBarOptions={{
-        activeTintColor: '#000',
-      }}
     >
       <Tab.Screen 
         name="Home" 
